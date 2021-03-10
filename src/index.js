@@ -25,7 +25,7 @@ app.post("/repositories", (request, response) => {
 
   repositories.push(repository);
 
-  return response.json(repository);
+  return response.status(201).json(repository);
 });
 
 app.put("/repositories/:id", (request, response) => {
@@ -42,7 +42,7 @@ app.put("/repositories/:id", (request, response) => {
 
   repositories[repositoryIndex] = repository;
 
-  return response.json(repository);
+  return response.status(200).json(repository);
 });
 
 app.delete("/repositories/:id", (request, response) => {
